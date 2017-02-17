@@ -1,0 +1,17 @@
+<h1 class="page-title">{{title}}</h1>
+<div class="loading text-center" *ngIf="loading"><img src="assets/img/loading.gif" alt="loading..."></div>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a [routerLink]="['/']">Map</a>
+  <li class="breadcrumb-item active">{{title}}</li>
+</ol>
+<section class="detailed" *ngIf="info">
+  <div class="detailed__img text-center">
+    <figure class="figure">
+      <img class="figure-img img-fluid" [src]="info.imageUrl" alt="{{title}}">
+      <figcaption class="figure-caption">{{info.headerTitle}}</figcaption>
+    </figure>
+  </div>
+  <div class="detailed__description">
+    {{info.description}}
+  </div>
+</section>
